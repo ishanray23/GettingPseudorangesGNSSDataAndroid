@@ -1,0 +1,14 @@
+//Android devices that support raw GNSS measurements
+
+private String getGnssMeasurementsStatus(int status) {
+    switch (status) {
+        case GnssMeasurementEvent.Callback.STATUS_NOT_SUPPORTED:
+            return "NOT_SUPPORTED";
+        case GnssMeasurementEvent.Callback.STATUS_READY:
+            return "READY";
+        case GnssMeasurementEvent.Callback.STATUS_LOCATION_DISABLED:
+            return "GNSS_LOCATION_DISABLED";
+        default:
+            return "<Unknown>";
+    }
+}
